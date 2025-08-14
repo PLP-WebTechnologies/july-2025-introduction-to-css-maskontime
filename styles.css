@@ -1,0 +1,165 @@
+
+/* ========== Base & Reset ========== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box; /* width/height include padding+border => easier sizing */
+}
+
+:root {
+  /* Spacing scale (edit to see global rhythm change) */
+  --space-1: 0.5rem;   /* 8px  */
+  --space-2: 1rem;     /* 16px */
+  --space-3: 1.5rem;   /* 24px */
+  --space-4: 2rem;     /* 32px */
+
+  /* Colors */
+  --bg: #f7f8fb;
+  --surface: #ffffff;
+  --text: #222222;
+  --muted: #555555;
+  --border: #dcdfea;
+  --accent: #1f7aff;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+/* ========== Layout Helpers ========== */
+.container {
+  max-width: 1000px;
+  margin-inline: auto;
+  padding: 0 var(--space-3);
+}
+
+/* ========== Header ========== */
+.site-header {
+  background: #0f172a;      /* dark blue */
+  color: #ffffff;
+  text-align: center;
+  padding: var(--space-3) var(--space-2);
+}
+
+.site-header h1 {
+  margin: 0 0 var(--space-1) 0;
+}
+
+/* ========== Panels show the Box Model (margin, border, padding, background) ========== */
+.panel {
+  background: var(--surface);       /* content background */
+  border: 1px solid var(--border);  /* border shows boundary */
+  padding: var(--space-3);          /* inner spacing (padding) */
+  margin: var(--space-3) 0;         /* outer spacing (margin) separates sections */
+  border-radius: 12px;              /* optional visual polish */
+}
+
+.panel h2 { margin-top: 0; }
+
+/* ========== Lists ========== */
+ul, ol, dl { margin-left: var(--space-2); }
+dt { font-weight: 600; }
+dd { color: var(--muted); margin: 0 0 var(--space-1) var(--space-1); }
+
+/* ========== Table (no HTML border attribute; all styling via CSS) ========== */
+.price-table {
+  width: 100%;
+  border-collapse: collapse;             /* remove double borders */
+  margin-top: var(--space-2);
+  background: var(--surface);
+}
+
+.price-table th,
+.price-table td {
+  border: 1px solid var(--border);
+  padding: var(--space-1);
+  text-align: left;
+}
+
+.price-table thead th {
+  background: #0f172a;
+  color: #ffffff;
+}
+
+/* ========== Media ========== */
+.product-image {
+  display: block;
+  width: 300px;          /* moved from inline HTML to CSS */
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  margin-top: var(--space-1);
+}
+
+audio, video {
+  display: block;
+  width: 100%;
+  max-width: 800px;
+  margin-top: var(--space-1);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: #000; /* video poster bg on some browsers */
+}
+
+/* ========== Form ========== */
+form {
+  display: grid;
+  gap: var(--space-2); /* space between rows */
+}
+
+fieldset {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: var(--space-2);
+}
+
+legend {
+  font-weight: 700;
+  padding: 0 var(--space-1);
+}
+
+label {
+  display: block;                /* label on its own line */
+  margin-top: var(--space-1);
+}
+
+input, select, textarea, button {
+  width: 100%;
+  padding: 0.75rem;
+  margin-top: 0.5rem;            /* space from label */
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font: inherit;                 /* match page font */
+}
+
+input:focus, select:focus, textarea:focus, button:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;           /* visible, accessible focus */
+}
+
+button[type="submit"], button {
+  background: var(--accent);
+  color: #fff;
+  font-weight: 600;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+button:hover {
+  filter: brightness(0.95);
+}
+
+/* ========== Footer ========== */
+.site-footer {
+  text-align: center;
+  color: var(--muted);
+  padding: var(--space-3) var(--space-2);
+}

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEEK 3 ASSIGNMENT.MASKON THRIFT STORE</title>
+    <!--Externa stylesheet for week 3 required-->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <h1>Welcome to MASKON Thrift Store</h1>
+        <p>Your one-stop shop for quality thrifted fashion!</p>
+    </header>
+    <main class="container">
+        <!-- Product catergories -->
+         <section class="panel" id="catergories">
+            <h2>Our product catergories</h2>
+
+            <h3>Clothing</h3>
+            <ul>
+                <li>Official trousers</li>
+                <li>Khaki pants</li>
+                <li>Hoodies &amp; Flannels</li>
+                <li>Shoes</li>
+            </ul>
+            <h3>Top selling items</h3>
+            <ol>
+                <li>Official trousers</li>
+                <li>Khaki pants</li>
+                <li>Official shoes</li>
+            </ol>
+
+            <h3>Product Definitons</h3>
+            <dl>
+                <dt>Khaki pants</dt>
+                <dd>Comfortable and Stylish.</dd>
+
+                <dt>Hoodies</dt>
+                <dd>Warm and Casual upper-body wear for chilly weather.</dd>
+
+
+                <dt>Official shoes</dt>
+                <dd>Elegant shoes for officialor formal wear.</dd>
+            </dl>
+         </section>
+
+         <!--Price list -->
+         <section class ="panel" id ="prices">
+            <h2> Price List</h2>
+            <table class="price-table">
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Price</th>
+                        <th>Available sizes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Khaki trousers</td>
+                        <td>1500</td>
+                        <td>M ,L, XL</td>
+                    </tr>
+                    <tr>
+                        <td>Shoes</td>
+                        <td>2500</td>
+                        <td>38-45</td>
+                    </tr>
+                </tbody>
+            </table>
+         </section>
+
+         <!-- Store preview (Media) -->
+          <section class="panel" id="preview">
+            <h2>Store Preview</h2>
+            <img
+               class="Product image" 
+               src="https://images.pexels.com/photos/33390183/pexels-photo-33390183.jpeg"
+               alt="A man wearing official trousers"
+               width="800"
+               height="600">
+
+               <h3>Audio</h3>
+               <audio controls autoplay>
+                           <source src="WhatsApp Audio 2025-08-08 at 16.19.50_1ade0e49.mp3" type="audio/mpeg">
+                           Your browser does not support the audio element.
+               </audio>
+
+               <h3>Video</h3>
+                    <video controls  width="800" height="600">
+                                 <source src="https://videos.pexels.com/video-files/5636186/5636186-uhd_2560_1440_24fps.mp4" type="video/mp4">
+                                 Your browser does not support the video tag.
+                    </video>
+          </section>
+
+          <!-- Order / Inquiry Form -->
+           <section class="panel" id="order">
+             <h2>Order / Inquiry Form</h2>
+
+             <form action="#" method="POST" >
+                <!-- Customer info -->
+                <fieldset>
+                    <legend>Customer Information</legend>
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name"required minilength="3" placeholder="JOSEPH MBUGUA" autocomplete="name">
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required placeholder="you@gmail.com" autocomplete="email">
+
+                <label for="phone"> Phone:</label>
+                <input type="tel"  id="Phone" name="Phone" required pattern="[0-9]{10}" placeholder="073445xxxx" inputmode="numeric">
+                </fieldset>
+
+                <!-- Order details -->
+                 <fieldset>
+                    <legend>Order Details</legend>
+                
+                <label for="item">Item:</label>
+                <select id="item" name="item" required>
+                    <option value="">--Choose--</option>
+                    <option value="khaki">Khaki trousers</option>
+                    <option value="shoes">Shoes</option>
+                    <option value="hoodie">Hoodie</option>
+                </select>
+                 
+                
+                <label for="quantity">quantity:</label>
+                <input type="number" id="quantity" name="quantity" min="1" required>
+
+                <label for="notes">Additional Notes:</label>
+                <textarea
+                      id="notes" name="notes"
+                      rows="4" cols="30"
+                      placeholder="Size, cOlor, delivery notes..."></textarea>
+                 </fieldset>
+
+                 <button type="submit">Submit Order</button>
+            </form>
+           </section>
+         </main>
+
+
+         <footer class="site-footer">
+            <p>&copy; 2025MASKON THRIFT STORE | All rights reserved</p>
+         </footer>
+</body>
+</html>
